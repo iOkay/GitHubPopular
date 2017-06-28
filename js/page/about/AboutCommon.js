@@ -75,7 +75,7 @@ export default class AboutCommon {
         this.props.navigator.push({
             title: item.full_name,
             component: RepositoryDetail,
-            params: {
+            passProps: {
                 projectModel: projectModel,
                 parentComponent: this,
                 ...this.props,

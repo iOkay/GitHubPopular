@@ -156,7 +156,7 @@ export default class AboutMePage extends Component {
         if (TargetComponent) {
             this.props.navigator.push({
                 component: TargetComponent,
-                params: params,
+                passProps: params,
             });
         }
     }

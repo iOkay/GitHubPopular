@@ -9,6 +9,7 @@ import {
     Text,
     InteractionManager,
     Platform,
+    Image,
 } from 'react-native'
 import HomePage from './HomePage'
 import ThemeDao from '../expand/dao/ThemeDao'
@@ -23,12 +24,12 @@ export default class WelcomePage extends Component {
         }));
         this.timer = setTimeout(() => {
             InteractionManager.runAfterInteractions(() => {
-                SplashScreen.hide();
+                // SplashScreen.hide();
                 navigator.resetTo({
                     component: HomePage,
-                    name: 'HomePage',
-                    params:{
-                        theme:this.theme
+                    title: 'HomePage',
+                    passProps:{
+                        theme: this.theme
                     }
                 });
             });
@@ -40,7 +41,8 @@ export default class WelcomePage extends Component {
     render() {
         return (
             <View style={styles.container}>
-                {/*<Image style={{flex:1,width:null}} resizeMode='repeat' source={require('../../res/images/LaunchScreen.png')}/>*/}
+                <Text>Here should show an image</Text>
+                {<Image style={{flex:1,width:null}} resizeMode='repeat' source={require('../../res/images/LaunchScreen.png')}/>}
             </View>
         );
     }

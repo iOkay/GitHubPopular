@@ -71,7 +71,7 @@ export default class TrendingRepoCell extends Component {
                         onLinkPress={(url) => {
                             this.props.navigator.push({
                                 component: WebViewPage,
-                                params: {
+                                passProps: {
                                     title:url,
                                     url:url,
                                     ...this.props

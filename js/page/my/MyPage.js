@@ -91,7 +91,7 @@ export default class MyPage extends Component {
         if (TargetComponent) {
             this.props.navigator.push({
                 component: TargetComponent,
-                params: params,
+                passProps: params,
             });
         }
     }

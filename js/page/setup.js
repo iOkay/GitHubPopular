@@ -1,8 +1,8 @@
 
 import React,{Component} from 'react'
 import {
-    Navigator,
-}from 'react-native'
+    NavigatorIOS,
+} from 'react-native'
 
 import RepositoryUtils from '../expand/dao/RepositoryUtils'
 import WelcomePage from './WelcomePage'
@@ -27,10 +27,10 @@ function setup(){
         }
         render() {
             return (
-                <Navigator
+                <NavigatorIOS
                     initialRoute={{
-                        name: 'WelcomePage',
-                        component:WelcomePage
+                        title: 'WelcomePage',
+                        component: WelcomePage
                     }}
                     renderScene={(e, i)=>this._renderScene(e, i)}
                 />

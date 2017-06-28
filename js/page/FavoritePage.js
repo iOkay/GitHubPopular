@@ -164,7 +164,7 @@ class FavoriteTab extends Component {
         belongNavigator.push({
             title: item.full_name,
             component: RepositoryDetail,
-            params: {
+            passProps: {
                 projectModel: projectModel,
                 flag:this.props.flag,
                 ...this.props

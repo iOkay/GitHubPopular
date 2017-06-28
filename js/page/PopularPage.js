@@ -89,7 +89,7 @@ export default class PopularPage extends Component {
                     onPress={()=>{
                         this.props.navigator.push({
                             component: SearchPage,
-                            params: {
+                            ppassProps: {
                                 theme:this.state.theme,
                                 ...this.props,
                             },
@@ -286,7 +286,7 @@ class PopularTab extends Component {
         this.props.navigator.push({
             title: item.full_name,
             component: RepositoryDetail,
-            params: {
+            passProps: {
                 projectModel: projectModel,
                 parentComponent: this,
                 flag: FLAG_STORAGE.flag_popular,

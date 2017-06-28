@@ -34,7 +34,7 @@ export default class HomePage extends Component {
         let selectedTab = this.props.selectedTab ? this.props.selectedTab : FLAG_TAB.flag_popularTab;
         this.state = {
             selectedTab: selectedTab,
-            theme: this.props.theme
+            theme: this.props.theme,
         };
     }
 
@@ -65,8 +65,8 @@ export default class HomePage extends Component {
     onReStart(jumpToTab){
         this.props.navigator.resetTo({
             component: HomePage,
-            name: 'HomePage',
-            params: {
+            title: 'HomePage',
+            passProps: {
                 ...this.props,
                 theme:this.state.theme,
                 selectedTab: jumpToTab,
@@ -91,8 +91,9 @@ export default class HomePage extends Component {
                 selected={this.state.selectedTab === selectedTab}
                 title={title}
                 selectedTitleStyle={this.state.theme.styles.selectedTitleStyle}
-                renderIcon={() => <Image style={styles.tabBarIcon}
-                                         source={renderIcon}/>}
+                renderIcon={() => <Image
+                    style={styles.tabBarIcon}
+                    source={renderIcon}/>}
                 renderSelectedIcon={() => <Image
                     style={[styles.tabBarSelectedIcon, this.state.theme.styles.tabBarSelectedIcon]}
                     source={renderIcon}/>}
@@ -121,7 +122,7 @@ export default class HomePage extends Component {
 const styles = StyleSheet.create({
     container:{
         flex:1,
-        // backgroundColor:'#fff',
+        backgroundColor:'#fff',
     },
     tabBarIcon: {
         width: 26, height: 26,
@@ -130,6 +131,6 @@ const styles = StyleSheet.create({
     tabBarSelectedIcon: {
         width: 26, height: 26,
         resizeMode: 'contain',
-        // tintColor:'#4caf50'
+        tintColor:'#4caf50'
     }
 })

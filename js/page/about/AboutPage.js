@@ -77,7 +77,7 @@ export default class AboutPage extends Component {
         if (TargetComponent) {
             this.props.navigator.push({
                 component: TargetComponent,
-                params: params,
+                passProps: params,
             });
         }
     }

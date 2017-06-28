@@ -75,7 +75,7 @@ export default class SearchPage extends Component {
         this.props.navigator.push({
             title: item.full_name,
             component: RepositoryDetail,
-            params: {
+            ppassProps: {
                 projectModel: projectModel,
                 parentComponent: this,
                 flag: FLAG_STORAGE.flag_popular,

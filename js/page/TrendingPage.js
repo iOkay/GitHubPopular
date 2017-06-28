@@ -344,7 +344,7 @@ class TrendingTab extends Component {
         this.props.navigator.push({
             title: item.fullName,
             component: RepositoryDetail,
-            params: {
+            ppassProps: {
                 projectModel: projectModel,
                 parentComponent: this,
                 flag: FLAG_STORAGE.flag_trending,
