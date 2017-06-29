@@ -89,7 +89,7 @@ export default class PopularPage extends Component {
                     onPress={()=>{
                         this.props.navigator.push({
                             component: SearchPage,
-                            ppassProps: {
+                            passProps: {
                                 theme:this.state.theme,
                                 ...this.props,
                             },

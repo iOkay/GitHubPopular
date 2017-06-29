@@ -24,7 +24,7 @@ export default class WelcomePage extends Component {
         }));
         this.timer = setTimeout(() => {
             InteractionManager.runAfterInteractions(() => {
-                // SplashScreen.hide();
+                SplashScreen.hide();
                 navigator.resetTo({
                     component: HomePage,
                     title: 'HomePage',
@@ -41,8 +41,7 @@ export default class WelcomePage extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <Text>Here should show an image</Text>
-                {<Image style={{flex:1,width:null}} resizeMode='repeat' source={require('../../res/images/LaunchScreen.png')}/>}
+                {/*<Image style={{flex:1,width:null}} resizeMode='repeat' source={require('../../res/images/LaunchScreen.png')}/>*/}
             </View>
         );
     }
