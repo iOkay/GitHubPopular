@@ -25,9 +25,6 @@ function setup(){
             );
         }
         render() {
-            new ThemeDao().getTheme().then((data=>{
-            this.theme=data;
-        }));
             return (
                 <NavigatorIOS
                     style = {{flex: 1}}

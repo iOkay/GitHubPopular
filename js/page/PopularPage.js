@@ -93,6 +93,7 @@ export default class PopularPage extends Component {
                                 theme:this.state.theme,
                                 ...this.props,
                             },
+
                         });
                     }}>
                     <View style={{padding:5}}>
