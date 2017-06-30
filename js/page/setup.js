@@ -1,4 +1,4 @@
-
+<script src="http://localhost:8097"></script>
 import React,{Component} from 'react'
 import {
     NavigatorIOS,

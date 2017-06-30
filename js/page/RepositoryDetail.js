@@ -110,6 +110,7 @@ export default class RepositoryDetail extends Component {
                 />
                 <WebView
                     ref={WEBVIEW_REF}
+                    automaticallyAdjustContentInsets={false}
                     startInLoadingState={true}
                     onNavigationStateChange={(e)=>this.onNavigationStateChange(e)}
                     source={{uri: this.state.url}}/>

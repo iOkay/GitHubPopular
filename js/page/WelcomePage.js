@@ -14,6 +14,7 @@ import {
 import HomePage from './HomePage'
 import ThemeDao from '../expand/dao/ThemeDao'
 import SplashScreen from 'react-native-splash-screen'
+import NavigationBar from '../common/NavigationBar';
 
 export default class WelcomePage extends Component {
 
@@ -30,7 +31,8 @@ export default class WelcomePage extends Component {
                     title: 'HomePage',
                     passProps:{
                         theme: this.theme
-                    }
+                    },
+                    navigationBarHidden: true,
                 });
             });
         }, 500);

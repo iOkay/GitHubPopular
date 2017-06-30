@@ -13,6 +13,7 @@ import {
     Image,
     View,
 } from 'react-native'
+import * as Progress from 'react-native-progress'
 import ScrollableTabView, {ScrollableTabBar} from 'react-native-scrollable-tab-view'
 import NavigationBar from '../common/NavigationBar'
 import ViewUtils from '../util/ViewUtils'
@@ -46,6 +47,7 @@ export default class PopularPage extends Component {
     }
 
     componentDidMount() {
+
         this.props.homeComponent.addSubscriber(this.onSubscriber);
         this.loadLanguage();
     }
@@ -132,8 +134,11 @@ export default class PopularPage extends Component {
                 tabBarBackgroundColor={this.state.theme.themeColor}
                 ref="scrollableTabView"
                 initialPage={0}
-                renderTabBar={() => <ScrollableTabBar style={{height: 40,borderWidth:0,elevation:2}} tabStyle={{height: 39}}
-                                                      underlineHeight={2}/>}
+                renderTabBar={() =>
+                    <ScrollableTabBar
+                        style={{height: 40,borderWidth:0,elevation:2}}
+                        tabStyle={{height: 39}}
+                        underlineHeight={2}/>}
             >
                 {this.state.languages.map((result, i, arr)=> {
                     var language = arr[i];
@@ -293,6 +298,7 @@ class PopularTab extends Component {
                 flag: FLAG_STORAGE.flag_popular,
                 ...this.props
             },
+            navigationBarHidden: true,
         });
     }
 
@@ -320,7 +326,7 @@ class PopularTab extends Component {
         var content =
             <ListView
                 ref="listView"
-                style={styles.listView}
+                // style={styles.listView}
                 renderRow={(e)=>this.renderRow(e)}
                 renderFooter={()=> {
                     return <View style={{height: 50}}/>
@@ -335,7 +341,8 @@ class PopularTab extends Component {
                         title="Loading..."
                         titleColor={this.props.theme.themeColor}
                         colors={[this.props.theme.themeColor, this.props.theme.themeColor, this.props.theme.themeColor]}
-                    />}
+                    />
+                }
             />;
         return (
             <View style={[GlobalStyles.listView_container, {paddingTop: 0}]}>

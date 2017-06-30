@@ -169,6 +169,7 @@ class FavoriteTab extends Component {
                 flag:this.props.flag,
                 ...this.props
             },
+            navigationBarHidden: true,
         });
     }
 

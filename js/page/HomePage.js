@@ -18,6 +18,7 @@ import FavoritePage from './FavoritePage'
 import MyPage from './my/MyPage'
 
 import ArrayUtils from '../util/ArrayUtils'
+import NavigationBar from '../common/NavigationBar';
 
 export var FLAG_TAB = {
     flag_popularTab: 'flag_popularTab', flag_trendingTab: 'flag_trendingTab',
@@ -71,7 +72,8 @@ export default class HomePage extends Component {
                 ...this.props,
                 theme:this.state.theme,
                 selectedTab: jumpToTab,
-            }
+            },
+            navigationBarHidden: true,
         });
     }
     onThemeChange(theme) {
